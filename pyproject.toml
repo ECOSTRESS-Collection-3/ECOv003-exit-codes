@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=60", "setuptools-scm>=8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ECOv003_exit_codes"
+version = "1.0.1"
+description = "ECOSTRESS Collection 3 exit codes"
+readme = "README.md"
+authors = [
+    { name = "Gregory H. Halverson", email = "gregory.h.halverson@jpl.nasa.gov" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+
+]
+
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "pytest>=6.0",
+    "pytest-cov",
+    "jupyter",
+    "pytest",
+    "twine"
+]
+
+[tool.setuptools.package-data]
+ECOv003_exit_codes = ["*.*"]
+
+[project.urls]
+"Homepage" = "https://github.com/ECOSTRESS-Collection-3/ECOv003-exit-codes"
+
+[tool.setuptools.packages.find]
+include = ["ECOv003_exit_codes"]
+exclude = []
